@@ -18,8 +18,8 @@ app.get('/', function (req, res)
 {
   res.sendFile(path.join(__dirname + '/public/index.html'));
 });
-let dcPowerSystemStatus1 = 1;
-let dcPowerSystemFault1 = 1;
+let _dcPowerSystemStatus1 = 1;
+let _dcPowerSystemFault1 = 1;
 let _Batterie_Entladung = 1;
 let _stoerung_kommunikation_MCU_TCP_IP_Adapter = 1;
 let _UGV_Redundanzfehler = 1;
