@@ -33,106 +33,120 @@
           <h3 class="white-text mb-0 py-5 font-weight-bold">SNMP Simulator</h3>
         </div>
       </div>
+      <div class="container">
+        <div class="row">
+          <!--Grid column-->
+          <div class="col">
+            <div class="text-center">
+              <button type="button" id="trap_01" class="btn btn-primary btn-rounded z-depth-1a">Trap to KOV01</button>
+            </div>
+          </div>
+          <!--Grid column-->
+          <div class="col">
+            <div class="text-center">
+              <button type="button" id="trap_02" class="btn btn-primary btn-rounded z-depth-1a">Trap to KOV02</button>
+            </div>
+          </div>
+          <form>
+        </div>
+      </div>
+      <div class="card-body mx-4">
+        <div class="md-form">
+          <i class="fas fa-user prefix grey-text"></i>
+          <label for="code">Stoerung Kommunikation MCU_TCP_IP Adapter</label>
+          <select class="form-control" id="_stoerung_kommunikation_MCU_TCP_IP_Adapter">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
 
-      <form>
-        <div class="card-body mx-4">
-          <div class="md-form">
-            <i class="fas fa-user prefix grey-text"></i>
-            <label for="code">Stoerung Kommunikation MCU_TCP_IP Adapter</label>
-            <select class="form-control" id="_stoerung_kommunikation_MCU_TCP_IP_Adapter">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
+        <div class="md-form">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <label for="checksum">UGV Redundanzfehler</label>
+          <select class="form-control" id="_UGV_Redundanzfehler">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
 
-          <div class="md-form">
-            <i class="fas fa-envelope prefix grey-text"></i>
-            <label for="checksum">UGV Redundanzfehler</label>
-            <select class="form-control" id="_UGV_Redundanzfehler">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
+        <div class="md-form">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label for="prime">UGV Netzfehler</label>
+          <select class="form-control" id="_UGV_Netzfehler">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label for="prime">UGV Batterieentladung SV2</label>
+          <select class="form-control" id="_UGV_Batterieentladung_SV2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label for="prime">UGV Geraetestoerung SV1</label>
+          <select class="form-control" id="_UGV_Geraetestoerung_SV1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label for="prime">Busfehler zu den Gleichrichtern_System Komponente</label>
+          <select class="form-control" id="_Busfehler_zu_den_Gleichrichtern_System_Komponente">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label for="prime">Gleichrichterfehler_Modulstoerung</label>
+          <select class="form-control" id="_Gleichrichterfehler_Modulstoerung">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label for="prime">UGV Auslastung gr 80 Proz</label>
+          <select class="form-control" id="_UGV_Auslastung_gr_80_Proz">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <label for="prime">Batterie Entladung</label>
+          <select class="form-control" id="_Batterie_Entladung">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        </form>
+        <!--Grid row-->
+        <div class="row d-flex align-items-center mb-3 mt-4">
 
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="prime">UGV Netzfehler</label>
-            <select class="form-control" id="_UGV_Netzfehler">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="prime">UGV Batterieentladung SV2</label>
-            <select class="form-control" id="_UGV_Batterieentladung_SV2">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="prime">UGV Geraetestoerung SV1</label>
-            <select class="form-control" id="_UGV_Geraetestoerung_SV1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="prime">Busfehler zu den Gleichrichtern_System Komponente</label>
-            <select class="form-control" id="_Busfehler_zu_den_Gleichrichtern_System_Komponente">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="prime">Gleichrichterfehler_Modulstoerung</label>
-            <select class="form-control" id="_Gleichrichterfehler_Modulstoerung">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="prime">UGV Auslastung gr 80 Proz</label>
-            <select class="form-control" id="_UGV_Auslastung_gr_80_Proz">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <label for="prime">Batterie Entladung</label>
-            <select class="form-control" id="_Batterie_Entladung">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-      </form>
-      <!--Grid row-->
-      <div class="row d-flex align-items-center mb-3 mt-4">
-
-        <!--Grid column-->
-        <div class="col-md-12">
-          <div class="text-center">
-            <button type="button" id="pushy" class="btn btn-grey btn-rounded z-depth-1a">Send</button>
+          <!--Grid column-->
+          <div class="col-md-12">
+            <div class="text-center">
+              <button type="button" id="pushy" class="btn-success btn-rounded z-depth-1a">Send</button>
+            </div>
           </div>
         </div>
 
       </div>
-
-    </div>
 
     </div>
   </section>
@@ -143,36 +157,56 @@
   <script src="/static/bootstrap.min.js"></script>
   <script>
     jQuery(document).ready(function ($) {
-
       function sendData() {
         var post_url = "/set"; //get form action url
         var request_method = "POST"; //get form GET/POST method
-        var form_data = JSON.stringify({
-          _stoerung_kommunikation_MCU_TCP_IP_Adapter: _stoerung_kommunikation_MCU_TCP_IP_Adapter.value,
-          _UGV_Redundanzfehler: _UGV_Redundanzfehler.value,
-          _UGV_Netzfehler: _UGV_Netzfehler.value,
-          _UGV_Batterieentladung_SV2: _UGV_Batterieentladung_SV2.value,
-          _UGV_Geraetestoerung_SV1: _UGV_Geraetestoerung_SV1.value,
-          _Busfehler_zu_den_Gleichrichtern_System_Komponente: _Busfehler_zu_den_Gleichrichtern_System_Komponente.value,
-          _Gleichrichterfehler_Modulstoerung: _Gleichrichterfehler_Modulstoerung.value,
-          _UGV_Auslastung_gr_80_Proz: _UGV_Auslastung_gr_80_Proz.value,
-          _Batterie_Entladung: _Batterie_Entladung.value
-        }); //Encode form elements for submission
-        $.ajax({
-          url: post_url,
-          type: request_method,
-          data: { form_data }
-        })
+        var form_data = JSON.stringify(
+          {
+            _stoerung_kommunikation_MCU_TCP_IP_Adapter: _stoerung_kommunikation_MCU_TCP_IP_Adapter.value,
+            _UGV_Redundanzfehler: _UGV_Redundanzfehler.value,
+            _UGV_Netzfehler: _UGV_Netzfehler.value,
+            _UGV_Batterieentladung_SV2: _UGV_Batterieentladung_SV2.value,
+            _UGV_Geraetestoerung_SV1: _UGV_Geraetestoerung_SV1.value,
+            _Busfehler_zu_den_Gleichrichtern_System_Komponente: _Busfehler_zu_den_Gleichrichtern_System_Komponente.value,
+            _Gleichrichterfehler_Modulstoerung: _Gleichrichterfehler_Modulstoerung.value,
+            _UGV_Auslastung_gr_80_Proz: _UGV_Auslastung_gr_80_Proz.value,
+            _Batterie_Entladung: _Batterie_Entladung.value
+          }); //Encode form elements for submission
+        $.ajax(
+          {
+            url: post_url,
+            type: request_method,
+            data:
+            {
+              form_data
+            }
+          })
       }
 
-      $(document).keypress(function (event) {
-        sendData()
-      });
-
+      function sendTrap(server) {
+        var post_url = "/trap/" + server; //get form action url
+        var request_method = "POST"; //get form GET/POST method
+        var form_data = JSON.stringify(
+          {}); //Encode form elements for submission
+        $.ajax(
+          {
+            url: post_url,
+            type: request_method,
+            data:
+            {
+              form_data
+            }
+          })
+      }
       $("#pushy").click(function (event) {
         sendData()
       });
-
+      $("#trap_01").click(function (event) {
+        sendTrap("KOV01")
+      });
+      $("#trap_02").click(function (event) {
+        sendTrap("KOV02")
+      });
     });
   </script>
 </body>
