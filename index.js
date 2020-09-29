@@ -444,35 +444,56 @@ app.post('/set', (req, res) => {
 });
 
 app.post('/trap/:server', (req, res) => {
-  let server = parseInt(req.params.server);
-  if (server == "KOV01") {
-    server = "10.0.1.3";
+  let server = req.params.server;
+  if (server === "KOV01") {
+    let options = {
+      port: 161,
+      retries: 1,
+      timeout: 5000,
+      backoff: 1.0,
+      transport: "udp4",
+      trapPort: 162,
+      version: snmp.Version1,
+      backwardsGetNexts: true,
+      idBitsSize: 32
+    };
+    console.log(server);
+    let session = snmp.createSession("10.0.1.3", "public", options);
+    let varbinds = [
+      {
+        oid: "1.3.6.1.4.1.27383.1.1.11.4.13.0",
+        type: snmp.ObjectType.Integer,
+        value: 1
+      }];
+    session.trap('1.3.6.1.6.3.1.1.5.2', varbinds, "10.50.83.6", function (error) {
+      if (error)
+        console.trace("Trap failed: " + error);
+    });
   }
-  else if (server == "KOV02") {
-    server = "10.0.1.4";
+  else if (server === "KOV02") {
+    let options = {
+      port: 161,
+      retries: 1,
+      timeout: 5000,
+      backoff: 1.0,
+      transport: "udp4",
+      trapPort: 162,
+      version: snmp.Version1,
+      backwardsGetNexts: true,
+      idBitsSize: 32
+    };
+    console.log(server);
+    let session = snmp.createSession("10.0.1.4", "public", options);
+    let varbinds = [
+      {
+        oid: "1.3.6.1.4.1.27383.1.1.11.4.13.0",
+        type: snmp.ObjectType.Integer,
+        value: 1
+      }];
+    session.trap('1.3.6.1.6.3.1.1.5.2', varbinds, "10.50.83.6", function (error) {
+      if (error)
+        console.trace("Trap failed: " + error);
+    });
   }
-  let options = {
-    port: 161,
-    retries: 1,
-    timeout: 5000,
-    backoff: 1.0,
-    transport: "udp4",
-    trapPort: 162,
-    version: snmp.Version1,
-    backwardsGetNexts: true,
-    idBitsSize: 32
-  };
-  let session = snmp.createSession(server, "public", options);
-
-
-  let varbinds = [
-    { oid: "1.3.6.1.4.1.27383.1.1.11.4.13.0", type: snmp.ObjectType.Integer, value: 1 }
-  ];
-
-
-  session.trap('1.3.6.1.6.3.1.1.5.2', varbinds, "10.50.83.6", function (error) {
-    if (error)
-      console.trace("Trap failed: " + error);
-  });
   res.send('ok!');
 })
