@@ -33,6 +33,7 @@ const options = {
   port: 161,
   disableAuthorization: false,
   accessControlModelType: snmp.AccessControlModelType.Simple,
+  address: "10.50.83.6",
   engineID: "8000B98380XXXXXXXXXXXX", // where the X's are random hex digits
   transport: "udp4"
 };
